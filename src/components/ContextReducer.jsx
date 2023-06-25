@@ -13,8 +13,6 @@ console.log(action);
   let newArr=[...state]
   newArr.splice(action.index,1)
   return newArr;
-   default:
-  console.log("Error in Reducer");
   case"UPDATE":
   let arr=[...state]
   arr.find((food,index)=>{
@@ -25,10 +23,12 @@ console.log(action);
     }
     return arr;
   })
-  return arr; 
+  return arr;
   case"DROP":
   let EmpARRAY=[];
   return EmpARRAY;
+  default:
+  console.log("Error in Reducer");
 }
 }
 
